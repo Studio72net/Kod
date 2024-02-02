@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  #studio72 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+  }
+
+  #dot {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    animation: expand 4s forwards;
+  }
+
+  @keyframes expand {
+    100% {
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      background-color: white;
+    }
+  }
+
+  #studio72black {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+  }
+</style>
+</head>
+<body>
+
+<div id="studio72">Studio72</div>
+<div id="dot"></div>
+<div id="studio72black">72</div>
+
+<script>
+  // JavaScript to change text color after animation
+  document.getElementById('dot').addEventListener('animationend', function() {
+    document.body.style.backgroundColor = "white";
+    document.getElementById('studio72').style.color = "black";
+    document.getElementById('studio72black').style.display = "block";
+  });
+</script>
+
+</body>
+</html>
+```
+
+Ten kod tworzy stronę z czarnym tłem, gdzie w prawym górnym rogu znajduje się napis "Studio72", a w lewym górnym rogu - mała biała kropka, która rozszerza się na cały ekran. Po animacji ekran staje się biały, a w lewym górnym rogu pojawia się czarna kropka z cyframi "72".
